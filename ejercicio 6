@@ -1,0 +1,14 @@
+python
+def analizar_lista(numeros):
+    mayor = max(numeros)
+    menor = min(numeros)
+    promedio = sum(numeros) / len(numeros)
+    return mayor, menor, promedio
+
+lista = [10, 5, 8, 20, 3]
+mayor, menor, promedio = analizar_lista(lista)
+
+print("Lista:", lista)
+print("Mayor:", mayor)
+print("Menor:", menor)
+print("Promedio:", promedio)
