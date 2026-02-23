@@ -1,0 +1,14 @@
+python
+numeros = []
+for i in range(5):
+    n = float(input(f"Ingrese el número {i+1}: "))
+    numeros.append(n)
+
+suma = sum(numeros)
+promedio = suma / len(numeros)
+mayor = max(numeros)
+
+print("Números:", numeros)
+print("Suma:", suma)
+print("Promedio:", promedio)
+print("Número mayor:", mayor)
