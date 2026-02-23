@@ -1,0 +1,47 @@
+python
+estudiantes = {}  # clave: código, valor: dict con nombre y notas
+
+def registrar_estudiante():
+    codigo = input("Código del estudiante: ")
+    nombre = input("Nombre del estudiante: ")
+    estudiantes[codigo] = {"nombre": nombre, "notas": []}
+    print("Estudiante registrado.")
+
+def agregar_nota():
+    codigo = input("Código del estudiante: ")
+    if codigo in estudiantes:
+        nota = float(input("Nota a agregar: "))
+        estudiantes[codigo]["notas"].append(nota)
+        print("Nota agregada.")
+    else:
+        print("Estudiante no encontrado.")
+
+def calcular_promedios_y_aprobados():
+    for codigo, datos in estudiantes.items():
+        notas = datos["notas"]
+        if notas:
+            promedio = sum(notas) / len(notas)
+        else:
+            promedio = 0
+        datos["promedio"] = promedio
+        estado = "Aprobó" if promedio >= 3.0 else "Reprobó"
+        print(f"Código: {codigo} | Nombre: {datos['nombre']} | Promedio: {promedio:.2f} | {estado}")
+
+while True:
+    print("\n--- SISTEMA ESTUDIANTES ---")
+    print("1. Registrar estudiante")
+    print("2. Agregar nota")
+    print("3. Mostrar promedios y aprobados")
+    print("4. Salir")
+    op = input("Opción: ")
+
+    if op == "1":
+        registrar_estudiante()
+    elif op == "2":
+        agregar_nota()
+    elif op == "3":
+        calcular_promedios_y_aprobados()
+    elif op == "4":
+        break
+    else:
+        print("Opción no válida.")
