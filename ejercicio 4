@@ -1,0 +1,27 @@
+python
+pila = []
+
+while True:
+    print("\n--- MENÚ PILA ---")
+    print("1. Agregar elemento")
+    print("2. Eliminar último elemento")
+    print("3. Mostrar pila")
+    print("4. Salir")
+    opcion = input("Opción: ")
+
+    if opcion == "1":
+        elem = input("Elemento a agregar: ")
+        pila.append(elem)
+        print("Elemento agregado.")
+    elif opcion == "2":
+        if pila:
+            eliminado = pila.pop()
+            print("Se eliminó:", eliminado)
+        else:
+            print("La pila está vacía.")
+    elif opcion == "3":
+        print("Pila:", pila)
+    elif opcion == "4":
+        break
+    else:
+        print("Opción no válida.")
