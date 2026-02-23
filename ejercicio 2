@@ -1,0 +1,6 @@
+python
+estudiante = ("Carlos Barros", 20, "Ingeniería de Sistemas")
+
+print("Nombre:", estudiante[0])
+print("Edad:", estudiante[1])
+print("Carrera:", estudiante[2])
