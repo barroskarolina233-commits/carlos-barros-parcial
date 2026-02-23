@@ -1,0 +1,10 @@
+python
+producto = {
+    "nombre": "Teclado mecánico",
+    "precio": 150000,
+    "stock": 25
+}
+
+print("Nombre:", producto["nombre"])
+print("Precio:", producto["precio"])
+print("Stock:", producto["stock"])
